@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSMNRU E-Library Portal</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="backArrow" onclick="goBack()">&#8592;</div>
+
+
+<div class="nav-header">
+  <img src="logo.png" alt="DSMNRU Logo" class="logo">
+  <img src="uni_name_201019.png" alt="DSMNRU Name Banner" class="banner">
+</div>
+
+<div class="top-nav">
+  <a href="#" class="home-link" onclick="goHome()">
+    <span>Welcom To DSMNRU E-Library Portal</span>
+  </a>
+</div>
+
+<main class="container">
+
+  <section class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterItems()">
+  </section>
+
+  <div class="grid" id="courseGrid">
+    <article class="card" onclick="openStreams('bsc')"><img src="B.SC.png"><h3>B.Sc</h3></article>
+    <article class="card" onclick="openStreams('msc')"><img src="M.SC.png"><h3>M.Sc</h3></article>
+    <article class="card" onclick="openStreams('btech')"><img src="B.TECH.png"><h3>B.Tech</h3></article>
+    <article class="card" onclick="openStreams('mtech')"><img src="M.TECH.png"><h3>M.Tech</h3></article>
+    <article class="card" onclick="openStreams('ba')"><img src="B.A.png"><h3>B.A</h3></article>
+    <article class="card" onclick="openStreams('ma')"><img src="M.A.png"><h3>M.A</h3></article>
+    <article class="card" onclick="openStreams('dpharma')"><img src="D.PHARMA.png"><h3>D.Pharma</h3></article>
+    <article class="card" onclick="openStreams('bpharma')"><img src="B.PHARMA.png"><h3>B.Pharma</h3></article>
+  </div>
+
+  <div id="streamSection" style="display:none">
+    <h2 id="selectedCourse"></h2>
+    <div class="grid" id="streamGrid"></div>
+  </div>
+
+  <div id="bookSection" style="display:none">
+    <h2 id="selectedStream"></h2>
+    <div class="grid" id="bookGrid"></div>
+  </div>
+
+</main>
+
+<div class="bottom-nav">
+  <div class="nav-links">
+    <a href="#" onclick="goHome()">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="copyright">
+    DSMNRU Lucknow • Library Portal © 2025
+  </div>
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
